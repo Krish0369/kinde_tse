@@ -72,7 +72,7 @@ const handleAddOrgButtonClick = async function () {
 addOrgButton?.addEventListener('click', handleAddOrgButtonClick)
 
 
-const nonsenseId = document.getElementById('nonsense');
+const organizationDiv = document.getElementById('organizationDiv');
 
 const token =  async () => {
   const result = await kinde.getToken();
@@ -101,4 +101,4 @@ const organizations = await getOrgs()
 const list = organizations.map(obj => `<p>${JSON.stringify(obj)}</p>`);
 
 
-nonsenseId.innerHTML = list
+organizationDiv.innerHTML = list
